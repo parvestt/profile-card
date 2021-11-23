@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --gray: hsl(0, 0%, 90%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background: url(images/bg-pattern-top.svg) no-repeat -10vw -50vh / 58%, url(images/bg-pattern-bottom.svg) no-repeat 45vw 50vh / 58%, var(--cyan);
+}
+
+.profile__card {
+    background: var(--white);
+    width: calc(100vw - 30px);
+    max-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.profile__head {
+    text-align: center;
+    background: url(images/bg-pattern-card.svg) no-repeat center / cover;
+}
+
+.profile__avatar {
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    transform: translate(0, 50%);
+    margin-top: 25px;
+}
+
+.profile__body {
+    padding: 65px 20px 25px;
+    border-bottom: 1px solid var(--gray);
+    text-align: center;
+}
+
+.profile__name,
+.profile__info h2 {
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.profile__age {
+    color: var(--gray-blue);
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.profile__city {
+    font-size: 14px;
+    color: var(--gray-blue);
+}
+
+.profile__footer {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.profile__info {
+    text-align: center;
+}
+
+.profile__info h2 {
+    margin-bottom: 5px;
+}
+
+.profile__info p {
+    color: var(--gray-blue);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 770px) {
+    body {
+        background-position: -10vw -20vh, 50vw 60vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-position: -15vw -10vh, 60vw 70vh;
+    }
+}
